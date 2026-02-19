@@ -31,5 +31,14 @@ export class ProductsController {
     }
 
     @Patch(':id')
-    updateProduct(@Param('id') prodId: string, @Body('title') prodTitle: string, @Body ('description') prodDesc: string, @Body('price') prodprice: number) {} 
+    updateProduct(
+        @Param('id') prodId: string, 
+        @Body('title') prodTitle: string, 
+        @Body ('description') prodDesc: string, 
+        @Body('price') prodPrice: number
+    ) {
+        console.log(prodTitle)
+        this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice);
+        return null;
+    } 
 }
