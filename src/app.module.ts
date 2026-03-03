@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 
 @Module({
-  imports: [ProductsModule, MongooseModule.forRoot('mongodb+srv://apple:apple@cluster0.ofnvdrh.mongodb.net/',
+  imports: [ProductsModule, MongooseModule.forRoot('mongodb+srv://apple:apple@cluster0.ofnvdrh.mongodb.net/nestjs-demo',
     ),
   ],
   controllers: [AppController],
